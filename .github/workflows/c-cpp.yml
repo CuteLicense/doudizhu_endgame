@@ -13,8 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Clone doudizhu_endgame
-      run: git clone https://github.com/YunyanDeng/doudizhu_endgame.git
 
     - name: Create build directory
       run: |
