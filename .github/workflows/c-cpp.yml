@@ -16,7 +16,7 @@ jobs:
 
     - name: Clone doudizhu_endgame
       run: |
-        cd doudizhu_endgame
+        cd doudizhu
 
     - name: Create build directory
       run: mkdir build
