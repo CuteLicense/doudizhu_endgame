@@ -22,8 +22,10 @@ jobs:
       run: mkdir build
 
     - name: Configure CMake
-      run: cmake ..  # 注意这里的路径，因为我们已经在doudizhu_endgame目录下
+      run: cmake .
+      working-directory: doudizhu  # 指定工作目录为源代码目录
+
 
     - name: Build project
       run: make
-      working-directory: doudizhu_endgame/build  # 指定工作目录为 build
+      working-directory: doudizhu/build  # 指定工作目录为 build
