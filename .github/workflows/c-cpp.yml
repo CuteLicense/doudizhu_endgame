@@ -1,0 +1,28 @@
+name: Build doudizhu_endgame
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Clone doudizhu_endgame
+      run: git clone https://github.com/YunyanDeng/doudizhu_endgame.git
+
+    - name: Create build directory
+      run: |
+        mkdir doudizhu_endgame/build
+        cd doudizhu_endgame/build
+
+    - name: Configure CMake
+      run: cmake ../doudizhu/
+
+    - name: Build project
+      run: make
