@@ -22,7 +22,7 @@ jobs:
 
     - name: change directory doudizhu
       run: |
-        cd doudizhu_endgame/doudizhu
+        cd /home/runner/work/doudizhu_endgame/doudizhu_endgame/doudizhu
 
     - name: Create build directory
       run: mkdir build
