@@ -20,9 +20,13 @@ jobs:
     - name: List all files and directories001
       run: ls -R /home/runner/work/doudizhu_endgame
 
+    - name: change directory doudizhu_endgame
+      run: |
+        cd doudizhu_endgame/doudizhu
+
     - name: change directory doudizhu
       run: |
-        cd /home/runner/work/doudizhu_endgame/doudizhu_endgame/doudizhu
+        cd doudizhu
 
     - name: Create build directory
       run: mkdir build
