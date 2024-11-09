@@ -28,6 +28,9 @@ jobs:
     - name: Build project
       run: make
       working-directory: /home/runner/work/doudizhu_endgame/doudizhu_endgame/doudizhu  # 指定正确的构建文件所在的目录
+    
+    - name: List all files and directories
+      run: ls -R /home/runner/work/doudizhu_endgame
 
     - name: Find and archive executable
       run: find /home/runner/work/doudizhu_endgame -type f -executable -exec mv {} /home/runner/work/doudizhu_endgame/doudizhu \;
