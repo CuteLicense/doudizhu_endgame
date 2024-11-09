@@ -20,10 +20,6 @@ jobs:
     - name: List all files and directories001
       run: ls -R /home/runner/work/doudizhu_endgame
 
-    - name: change directory doudizhu_endgame
-      run: |
-        cd doudizhu_endgame
-
     - name: change directory doudizhu
       run: |
         cd doudizhu
