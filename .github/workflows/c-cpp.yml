@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Clone doudizhu_endgame
+    - name: change directory doudizhu
       run: |
         cd doudizhu
 
@@ -28,3 +28,9 @@ jobs:
     - name: Build project
       run: make
       working-directory: /home/runner/work/doudizhu_endgame/doudizhu_endgame/doudizhu  # 指定正确的构建文件所在的目录
+
+    - name: Archive build artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: compiled-files
+        path: /home/runner/work/doudizhu_endgame/doudizhu_endgame/doudizhu  # 指定要存档的路径
