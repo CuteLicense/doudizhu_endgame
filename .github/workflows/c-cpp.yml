@@ -14,6 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: Clean up build directory
+      run: rm -rf /home/runner/work/doudizhu_endgame/build
+
     - name: change directory doudizhu
       run: |
         cd doudizhu
@@ -24,10 +27,18 @@ jobs:
     - name: Configure CMake
       run: cmake .
       working-directory: doudizhu  # 指定工作目录为包含 CMakeLists.txt 的 doudizhu 文件夹
+
+    - name: Debug CMake
+      run: cmake . --debug-output
+      working-directory: doudizhu
     
+   # - name: Build project
+   #   run: make
+   #   working-directory: /home/runner/work/doudizhu_endgame/doudizhu_endgame/doudizhu  # 指定正确的构建文件所在的目录
+
     - name: Build project
-      run: make
-      working-directory: /home/runner/work/doudizhu_endgame/doudizhu_endgame/doudizhu  # 指定正确的构建文件所在的目录
+      run: make VERBOSE=1
+      working-directory: /home/runner/work/doudizhu_endgame/doudizhu_endgame/doudizhu
     
     - name: List all files and directories
       run: ls -R /home/runner/work/doudizhu_endgame
