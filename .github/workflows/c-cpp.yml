@@ -36,11 +36,11 @@ jobs:
       
     - name: Configure CMake
       run: cmake .
-      working-directory: doudizhu/build  # 指定工作目录为包含 CMakeLists.txt 的 doudizhu 文件夹
+      working-directory: build  # 指定工作目录为包含 CMakeLists.txt 的 doudizhu 文件夹
 
     - name: Debug CMake
       run: cmake . --debug-output
-      working-directory: doudizhu/build
+      working-directory: build
     
    # - name: Build project
    #   run: make
