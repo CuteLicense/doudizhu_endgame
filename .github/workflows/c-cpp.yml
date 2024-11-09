@@ -23,8 +23,8 @@ jobs:
 
     - name: Configure CMake
       run: cmake .
-      working-directory: doudizhu  # 指定工作目录为源代码目录
-
+      working-directory: doudizhu  # 指定工作目录为包含 CMakeLists.txt 的 doudizhu 文件夹
+    
     - name: Build project
       run: make
       working-directory: doudizhu_endgame/doudizhu  # 指定工作目录为构建文件所在目录
