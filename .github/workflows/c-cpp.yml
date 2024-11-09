@@ -30,7 +30,7 @@ jobs:
       working-directory: /home/runner/work/doudizhu_endgame/doudizhu_endgame/doudizhu  # 指定正确的构建文件所在的目录
 
     - name: Archive build artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: compiled-files
         path: /home/runner/work/doudizhu_endgame/doudizhu_endgame/doudizhu  # 指定要存档的路径
