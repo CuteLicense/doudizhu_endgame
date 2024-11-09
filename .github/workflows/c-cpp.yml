@@ -22,7 +22,7 @@ jobs:
 
     - name: change directory doudizhu_endgame
       run: |
-        cd doudizhu_endgame/doudizhu
+        cd doudizhu_endgame
 
     - name: change directory doudizhu
       run: |
