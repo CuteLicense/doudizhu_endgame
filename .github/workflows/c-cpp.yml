@@ -29,6 +29,10 @@ jobs:
       run: make
       working-directory: /home/runner/work/doudizhu_endgame/doudizhu_endgame/doudizhu  # 指定正确的构建文件所在的目录
 
+    - name: Find and archive executable
+      run: find /home/runner/work/doudizhu_endgame -type f -executable -exec mv {} /home/runner/work/doudizhu_endgame/doudizhu \;
+      working-directory: /home/runner/work/doudizhu_endgame
+
     - name: Archive build artifacts
       uses: actions/upload-artifact@v4
       with:
