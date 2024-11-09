@@ -17,6 +17,9 @@ jobs:
     - name: Clean up build directory
       run: rm -rf /home/runner/work/doudizhu_endgame/build
 
+    - name: List all files and directories001
+      run: ls -R /home/runner/work/doudizhu_endgame
+
     - name: change directory doudizhu
       run: |
         cd doudizhu
