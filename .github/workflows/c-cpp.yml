@@ -34,6 +34,9 @@ jobs:
     - name: change directory doudizhu
       run: |
         cd build
+
+    - name: List all cruuent files and directories002
+      run: ls -R
       
     - name: Configure CMake
       run: cmake ..
