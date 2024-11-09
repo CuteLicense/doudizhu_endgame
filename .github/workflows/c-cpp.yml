@@ -27,4 +27,4 @@ jobs:
     
     - name: Build project
       run: make
-      working-directory: doudizhu_endgame/doudizhu  # 指定工作目录为构建文件所在目录
+      working-directory: /home/runner/work/doudizhu_endgame/doudizhu_endgame/doudizhu  # 指定正确的构建文件所在的目录
